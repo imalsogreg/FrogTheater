@@ -1,0 +1,26 @@
+name:          frogtheater
+synopsis:      Gloss-based worm and cricket projection for frog virtual reality
+version:       0.1
+license:       GPL-3
+author:        Greg Hale and Andrew Bolton
+maintainer:    Greg Hale <imalsegreg@gmail.com>
+copyright:     (c) Andrew Bolton 2013 
+category:      Graphics
+build-type:    Simple
+cabal-version: >=1.8
+homepage:      https://github.com/ImAlsoGreg/FrogTheater
+
+source-repository head
+  type: git
+  location: https://github.com/ImAlsoGreg/FrogTheater
+
+executable FrogTheater
+  main-is:          Main.hs
+  hs-source-dirs:   Graphics
+                  , Graphics/FrogTheater
+                  , Graphics/FrogTheater/Character
+  other-modules:  Character, Worm
+  build-depends:    base >= 4
+                  , stm
+                  , gloss
+	
